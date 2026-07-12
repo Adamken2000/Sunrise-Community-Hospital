@@ -2,11 +2,17 @@
     padding: 0px;
     margin: 0px;
     font-family:"Helvetica Now MT Text Medium", Helvetica-Bold, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
 }
 /* overall container for page elements. */
 .page-elements{
-    display: grid;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+    justify-content: space-between;
+    height: max-content;
+    width:100%;
+    gap: 0.2em;
 }
 
 /*Header section css style*/
@@ -15,33 +21,43 @@ header{
     display: flex;
     flex-direction: row;
     position: sticky;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     max-width:100%;
-    height: 60px;
+    height:max-content;
+    margin-bottom: 0.25em;
     
 }
 /* logo and hospital name as link */
+.logo_name{
+    display: flex;
+    height: fit-content;
+    max-width: 900px;
+    align-items: center ;
+    justify-content: center;
+}
+
 .logo_as_link{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
-    margin-right: 1em;
+    width: 700px;
     
 }
 /* sunrise logo */
 .logo{
-    width: 6.5%;
-    margin-top: 0.5em;
+    width: 7.8%;
+    margin-top: 0.3em;
     padding-left: 2em;
     
 }
 /* hospital name */
 .head_name{
     margin-left: 5%;
-    margin-right: 2em;
-    margin-top: 0.5em;
+    margin-right: 3%;
+    margin-top: 0.39em;
     padding-right: 0;
     text-transform: uppercase;
     font-size: 1.7em;
@@ -64,6 +80,8 @@ header{
 .header-details-container{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
 .hospital_contact{
