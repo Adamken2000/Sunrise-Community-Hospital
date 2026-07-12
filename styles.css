@@ -1,0 +1,317 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:"Helvetica Now MT Text Medium", Helvetica-Bold, Helvetica, Arial, sans-serif;
+}
+/* overall container for page elements. */
+.page-elements{
+    display: grid;
+    flex-wrap: wrap;
+}
+
+/*Header section css style*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    justify-content: space-around;
+    max-width:100%;
+    height: 60px;
+    
+}
+/* logo and hospital name as link */
+.logo_as_link{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    text-decoration: none;
+    margin-right: 1em;
+    
+}
+/* sunrise logo */
+.logo{
+    width: 6.5%;
+    margin-top: 0.5em;
+    padding-left: 2em;
+    
+}
+/* hospital name */
+.head_name{
+    margin-left: 5%;
+    margin-right: 2em;
+    margin-top: 0.5em;
+    padding-right: 0;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    
+}
+.sunrise{
+    color: #f6b438;
+    
+}
+.community{
+    color: #0077C0;
+}
+
+.hospital{
+    color: #66A515;
+}
+
+/* hospital header information */
+
+.header-details-container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hospital_contact{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-right:1em;
+    padding:0.5em;
+    min-width: max-content;
+}
+
+.info_widgets{
+    display: flex;
+    width: 100%;
+    font-size: 1.5em;
+    object-fit: contain;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.info_text{
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-item{
+    color: #159EEC;
+    font-size: 0.7em;
+    white-space: nowrap;
+    margin-top: 3%;
+}
+
+/* hospital work hours */
+.work_hour{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-right:1em;
+    padding:0.5em;
+    min-width: max-content;
+}
+
+.head-info{
+    margin-top: 0.1em;
+}
+
+/* hospital location */
+.location{
+    display: flex;
+    justify-self: right;
+    align-items: center;
+    margin-right:1em;
+    padding:0.5em;
+    min-width: max-content;
+}
+
+
+.map_link{
+    color: #159EEC;
+    font-size: 0.7em;
+    white-space: nowrap;
+    text-decoration: none;
+    
+}
+
+
+
+/*nav bar css style*/
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    flex-wrap: wrap;
+    background-color: #7ac519;
+    justify-content: space-between;
+    position: sticky;
+}
+
+.nav-bar:hover{
+    background-color: #69ba00;
+}
+
+.nav-links{
+    margin-left: 7.6%;
+}
+
+.nav-links ul{
+    display: flex;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li{
+    margin-left:-2.49em;
+
+}
+.nav-links li a{
+    display: block;
+    text-align: center;
+    padding: 1em 3em ;
+    text-decoration: none;
+    margin-left: 5%;
+    white-space: nowrap;
+    color: #f7f7f8;
+    font-weight: bold;
+}
+
+.page:hover {
+    color: rgb(249, 200, 109);
+}
+
+.appointment button{
+    border-radius: 10em;
+    border-style: none;
+    padding: 0.7em 1em 0.7em 1em;
+    background-color: #159EEC;
+    margin-right: 0.5em;
+}
+
+
+.appointment button:active{
+ background-color: #0077C0;
+}
+
+.appointment button a{
+    color:#f7f7f8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*footer css style*/
+
+footer{
+    background-color:#7ac519;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1% 2%;
+    width: 100%;
+    box-sizing: border-box;
+    justify-items: center;
+    flex-direction: column;
+}
+
+/* holds name,motto,contacts and web links */
+footer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    
+}
+
+/* footer hospital name and motto */
+
+.name-motto{
+    color: #f7f7f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    margin-right: 2em;
+    text-align: center;
+}
+
+.name-motto a{
+    text-decoration: none;
+    
+}
+
+.footer_name{
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+.footer_name span{
+    color: #f6b438;
+    margin-bottom: 0.5em;
+}
+
+.footer-motto{
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+
+
+/* Footer web link pages */
+.web-links{
+    color: #159EEC;
+    display: flex;
+    flex-direction: column;
+    margin-right: 3em;
+    margin-left: 3em;
+    margin-bottom: 0.5em;
+    
+}
+
+.web-links h2{
+    padding-bottom: 0.5em;
+    
+}
+
+.web-links a{
+    text-decoration: none;
+    color: #f7f7f8;
+}
+
+/* Hospital footer info */
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 0.5em;
+    margin-left: 2em;
+}
+
+.contact-info h2{
+    color:#159EEC;
+}
+
+.contact-info h2{
+    padding-bottom: 0.5em;
+}
+
+.number{
+    color: #f7f7f8;
+}
+.contact-info div a{
+   color: #f7f7f8;
+   text-decoration: none;
+}
+
+
+.copyright-container{
+    border-top: 1px solid#f7f7f8;
+    width: 60em;
+    padding-top: 1em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    color: #f7f7f8;
+}
