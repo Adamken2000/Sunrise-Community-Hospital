@@ -1,0 +1,212 @@
+/* Media queries */
+/* ==========================================
+   Big Screens (Laptops & Desktops: 1024px to 1440px)
+   ========================================== */
+@media all and (min-width: 64.375rem) and (max-width: 90rem) {
+   html {
+        font-size: 62.5%; /* 1rem = 10px */
+    }
+    .motto{
+        display:none;
+    }
+}
+
+/* ==========================================
+   Medium Screens (Tablets: 600px to 1030px)
+   ========================================== */
+@media all and (min-width: 43.75rem) and (max-width: 64.375rem) {
+    html {
+        font-size: 50%; /* 1rem = px */
+    }
+    
+    .title-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 5rem;
+        padding: 0.1rem 1rem;
+        margin: 0.3rem 0;
+
+    }
+
+    .logo_as_link{
+        margin: 0;
+    }
+
+    .header-details-container{
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+
+   .hospital-name{
+        font-size: 2.1rem;
+    }
+
+    .logo{
+        max-width: 40px;
+        min-width: 5%;
+        height: auto;
+    }
+   
+
+    .info_widgets{
+        font-size: 14px;
+    }
+
+    .info_text{
+        font-size: 1.2rem;
+    }
+
+    .info_item{
+        font-size: 1.2rem;
+    }
+    .motto{
+        display:none;
+    }
+   
+}
+/* ==========================================
+   Small Screens (Mobile Phones: 575px to 700px)
+   ========================================== */
+@media all and (min-width: 35.9375rem) and (max-width: 43.75rem) {
+    html {
+        font-size: 37.5%; /* 1rem = px */
+    }
+
+    .title-bar{
+        display: flex;
+       height: 5rem;
+        padding: 0.1rem 1rem;
+        margin: 0.3rem 0;
+        
+        
+    }
+
+    .logo{
+        width: 30px;
+        height: auto;
+    }
+
+    .hospital-name{
+        font-size: 2.2rem;
+        padding:0.5rem;
+    }
+
+    .info_widgets{
+        font-size: 12px;
+    }
+
+    .info_text{
+        font-size: 1.4rem;
+    }
+
+    .info-item{
+        font-size: 1.4rem;
+    }
+
+    .map_link{
+        font-size: 1.4rem;
+    }
+
+    .motto{
+        display:none;
+    }
+}
+
+/* ==========================================
+   Extra Small Screens (Mobile Phones: below 575px )
+   ==========================================  */
+   @media all and (max-width: 35.9375rem){
+    html {
+        font-size: 32.5%; /* 1rem = px */
+    }
+
+    .title-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5.59rem;
+        padding: 0.1rem 1rem;
+        margin: 0.3rem 0;
+
+        
+    }
+
+    .logo_name{
+        padding-left: 0.5rem;
+    }
+
+    .header-details-container{
+        display: none;
+    }
+
+    .hospital-name p{
+        font-size: 3rem;
+        padding-top: 1rem;
+    }
+
+    .logo{
+        width: 30px;
+        height: auto;
+        padding-bottom: 0.3rem;
+    }
+
+    .motto{
+        display:flex;
+        
+        font-weight: 700;
+        font-size: 1.5rem;
+        min-width: 150px;
+    }
+    .motto span{
+        display: inline-block;
+        margin: 0;
+        padding: 0.1rem 0 0 0;
+    }
+
+   }
+
+
+   /* screen below 420px */
+   @media all and (max-width: 26.25rem){
+
+    .motto{
+        display: none;
+    }
+
+    .title-bar{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .logo{
+        width: 30px;
+    }
+
+    .page{
+        display: none;
+    }
+
+    .burger-icon{
+        display: flex;
+        margin-right: 2rem;
+    }
+
+    .nav-links ul{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .nav-bar{
+        justify-content: flex-start;
+    }
+    .appointment{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+    }
+   }
