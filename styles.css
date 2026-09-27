@@ -19,15 +19,16 @@ body {
 
 /* color variables */
 :root {
-    --primary-color: #f6b438;
-    --primary-color-hover: #ffc55a;
-    --secondary-color: #0077C0;
+    --primary-color: #f6ce19;
+    --primary-color-hover: #ffc04c;
+    --secondary-color: #1790db;
     --accent-color: #66A515;
     --background-color: #f7f7f8;
     --navbar-color: #7ac519;
-    --button-color: #159EEC;
-    --button-hover-color: #208fff;
+    --button-color: #3fb5f9;
+    --button-hover-color: #27aefb;
     --text-color: #fffdfd;
+    --trans-transition: 0.2s ease;
 }
 
 /* overall container for page elements. */
@@ -42,6 +43,13 @@ body {
     position: relative;
 }
 
+header{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--background-color);
+}
 
 /* Title Bar section */
 .title-bar{
@@ -179,8 +187,7 @@ body {
 }
 
 .map_link:hover{
-    text-decoration: underline;
-    color: var(--primary-color-hover);
+    color: var(--navbar-color);
 }
 
 .motto{
@@ -197,7 +204,7 @@ body {
     align-items: center;
     background-color: var(--navbar-color);
     padding: 1rem;
-    position: sticky;
+    height:5rem;
     
 }
 .nav-bar a{
@@ -222,6 +229,7 @@ body {
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
+    transition: var(--trans-transition);
 }
 
 .nav-links a:hover{
@@ -235,19 +243,28 @@ body {
     margin-right: 1rem;
 }
 
-.appointment a{
+.appointment a, .appointment p, .appointment span{
+    margin-right: 1rem;
+    font-weight:bold;
+    padding:0 0.5rem 0 0.5rem;
+}
+
+.appointment a, #appointment-btn{
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
-    
+    transition: var(--trans-transition);
 }
 
-.appointment a:hover{
+.appointment a:hover, #appointment-btn:hover{
     color: var(--primary-color-hover);
 }
 
+#appointment-btn{
+    font-size: inherit;
+}
 .appointment button{
-    padding: 0.8rem 2rem;
+    padding: 1rem 2rem;
     border: none;
     width: fit-content;
     background-color: var(--button-color);
@@ -256,9 +273,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    transition: var(--trans-transition);
 }
 .appointment button:hover{
     background-color: var(--button-hover-color);
+    cursor: pointer;
 }
 
 .log-in{
@@ -307,3 +327,196 @@ body {
 .burger-icon{
     display:none;
 }
+
+/* Hero Section */
+.hero{
+    position: relative; /* To keep .bg-slide inside hero  */
+    height: 83vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg-slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 1; /* keep image behind text content  */
+    inset:0;
+
+}
+
+/* 2. Slide properties */
+.bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: crossfade 15s infinite ease-in-out;
+}
+
+/* Pseudo-element overlay on every slide */
+.hero-bg-slider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.05) 100%);
+  z-index: 1;
+}
+
+/* 3. Stagger animation delays for 3 images (15s total / 3 images = 5s each) */
+.bg-slide:nth-child(1) { animation-delay: 0s; }
+.bg-slide:nth-child(2) { animation-delay: 5s; }
+.bg-slide:nth-child(3) { animation-delay: 10s; }
+
+/* 4. Ensure hero text content renders above background images */
+.hero-content {
+  position: absolute;
+  z-index: 3; /* Forces text in front of slides */
+  top: 44.5%;                     /* Positions the element 3/4 down the hero container */
+  left: 1%;                     /* Left padding alignment */
+  transform: translateY(-50%);  /* Vertically centers content on the 75% line */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 5. @keyframes animation rule */
+@keyframes crossfade {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  33%  { opacity: 1; }
+  43%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.hero-content div{
+    margin-bottom: 1rem;
+}
+.hero-content h1{
+    color: var(--primary-color);
+    font-size: 3.4rem;
+    font-weight: bolder;
+    
+}
+
+.hero-content p{
+    font-weight: bold;
+    color: var(--navbar-color);
+    font-size: 2.3rem;
+    letter-spacing: 0.15em;
+    width:inherit;
+}
+
+.hero-btn button{
+    padding: 1rem 2rem 1rem 2rem;
+    border:none;
+    border-radius: 2rem;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    font-size: inherit;
+}
+
+.hero-btn button:hover{
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
+
+
+
+/* Card Styling */
+.hero-cards{
+    position: relative;
+    z-index: 10;
+    margin-top: -1.5em; /* Pulls the section up into the hero area */
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 42rem;
+  width: 4rem;
+  padding: 1.5rem 2rem;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.appointment-card {
+  background-color: var(--navbar-color);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.contact-card {
+  background-color: var(--navbar-color);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-info a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Main Content */
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    margin-top: 2rem;
+}
+
+.welcome-msg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    gap: 0.5rem;
+
+}
+
+.welcome-msg h3{
+    color: var(--accent-color);
+}
+
+.welcome-msg h1{
+    color: var(--button-color);
+}
+
+.welcome-msg p{
+    font-family: "Gill Sans", sans-serif;
+    width:100%;
+    text-align: center;
+    line-height: 2.2rem;
+    
+
+}
+
+

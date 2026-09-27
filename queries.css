@@ -1,18 +1,45 @@
 /* Media queries */
 /* ==========================================
+   Big Screens (Laptops & Desktops: more than 1440px)
+   ========================================== */
+@media all and (min-width: 90rem) {
+   html {
+        font-size: 87.5%; /* 1rem = 14px */
+    }
+    .motto{
+        display:none;
+    }
+
+    .bg-slide {
+    background-position: center top;
+  }
+  
+    
+}
+
+/* ==========================================
    Big Screens (Laptops & Desktops: 1024px to 1440px)
    ========================================== */
-@media all and (min-width: 64.375rem) and (max-width: 90rem) {
+@media all and (min-width: 64.3749rem) and (max-width: 90rem) {
    html {
         font-size: 62.5%; /* 1rem = 10px */
     }
     .motto{
         display:none;
     }
+
+    .bg-slide {
+    background-position: center right;
+  }
+
+  .hero{
+        height: 75vh;
+    }
+    
 }
 
 /* ==========================================
-   Medium Screens (Tablets: 600px to 1030px)
+   Medium Screens (Tablets: 700px to 1030px)
    ========================================== */
 @media all and (min-width: 43.75rem) and (max-width: 64.375rem) {
     html {
@@ -65,6 +92,19 @@
     .motto{
         display:none;
     }
+
+    /* hero section */
+    .hero{
+        height: 75vh;
+    }
+
+    .bg-slide {
+    background-position: center right;
+    }
+
+    .hero-content{
+        top: 35%;
+    }
    
 }
 /* ==========================================
@@ -113,6 +153,12 @@
     .motto{
         display:none;
     }
+
+    /* hero section */
+    .hero{
+        height: 60vh;
+    }
+
 }
 
 /* ==========================================
@@ -166,11 +212,37 @@
         padding: 0.1rem 0 0 0;
     }
 
+    /* hero section */
+    .hero{
+        height: 45vh;
+    }
+
+    .hero-content{
+        top: 35%;
+    }
+
+    .hero-content h1{
+        font-size: 3rem;
+    }
+
+    .hero-content p{
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .hero-btn{
+        display: none;
+    }
+    
+
    }
 
 
    /* screen below 420px */
    @media all and (max-width: 26.25rem){
+    html {
+        font-size: 28.25%; /* 1rem = px */
+    }
 
     .motto{
         display: none;
@@ -186,9 +258,7 @@
         width: 30px;
     }
 
-    .page{
-        display: none;
-    }
+    
 
     .burger-icon{
         display: flex;
@@ -196,17 +266,50 @@
     }
 
     .nav-links ul{
-        display: flex;
-        justify-content: flex-start;
+        display: none;
     }
 
     .nav-bar{
-        justify-content: flex-start;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center;
+        height: 6rem;
     }
     .appointment{
         display: flex;
         justify-content: space-between;
         width: 100%;
-        margin: 0;
+        
     }
+
+    .appointment a, .appointment span, .appointment p{
+        font-size: 2rem;
+    }
+
+   
+
+    /* hero section */
+    .hero{
+        height: 40vh;
+        
+    }
+
+    .hero-content{
+        top: 40%;
+    }
+
+    .hero-content h1{
+        font-size: 2.5rem;
+    }
+
+    .hero-content p{
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .hero-btn{
+        display: none;
+    }
+
+
    }
