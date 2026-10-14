@@ -42,13 +42,13 @@ body, main {
     justify-content: space-between;
     height: max-content;
     width:100%;
-    gap: 0.2em;
-    position: relative;
+    
 }
 
 header{
     position: sticky;
     width: 100%;
+    height: 100px;
     top: 0;
     z-index: 1000;
     background-color: var(--background-color);
@@ -63,7 +63,7 @@ header{
     width: 100%;
     height: 4rem;
     padding: 0.5rem 1rem;
-    margin: 1rem 0;
+    margin: 0.8rem 0;
 }
 
 /* Logo and Name Container */
@@ -221,6 +221,8 @@ header{
     background-color: var(--navbar-color);
     padding: 1rem;
     height:5rem;
+   
+
     
 }
 .nav-bar a{
@@ -842,7 +844,7 @@ footer{
     align-items: center;
     width: 100%;
     border-bottom: 1px solid var(--text-color);
-    margin: 1rem 0 2rem 0;
+    margin: 0.5rem 0 2rem 0;
 }
 
 .name-motto{
@@ -902,4 +904,730 @@ footer h2{
     height: 3rem;
     background-color: var(--navbar-color);
     color: var(--text-color);
+}
+
+/* ========Appointment Booking Page========== */
+/* =======Hero Section====== */
+.appointment-hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.appointment-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(64, 241, 0, 0.199) 0%, rgba(17, 17, 17, 0.278) 100%), url(images/neurologist.jpg);
+    background-size:cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    padding-left: 5rem;
+    text-align: center;
+}
+
+.appointment-hero div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+.page-bread-crumb{
+    display: block;
+    font-size: 2rem;
+    color: var(--navbar-color);
+    margin-bottom: 0.2rem;
+    font-weight:700;
+}
+
+.appointment-hero-heading{
+    display: block;
+    font-size: 4rem;
+    color: var(--button-color);
+    font-weight: bold;
+}
+
+ /* =======Form application container====== */
+.appointment-div{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+}
+
+.form-block{
+    border-radius: 2rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 1px 0 10px rgba(0,0,0,0.3);
+    background-color: var(--navbar-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    margin: 3rem;
+    color: var(--text-color);
+}
+
+.form-block h2{
+    text-decoration: underline;
+    
+}
+
+.form-block div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-bottom: 0.3px solid #fffffff3;
+    padding-bottom: 1.5rem;
+    
+   
+}
+.name-id{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+    width: 80%;
+    
+}
+
+
+.gender-number{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    width: 80%;
+}
+
+.mail-department{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    width: 80%;
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    width: 50%;
+}
+ input,select{
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border: 1px solid #6c6a6a98;
+    outline: none;
+    margin: 0.5rem;
+    width: 80%;
+    height: 5rem;
+ }
+
+.buttons{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons button{
+    display: flex;
+    padding: 1rem 3rem 1rem 3rem;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 2rem;
+    border: 1px solid #f6f5f5;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: 0.2s ease-in-out;
+}
+
+#submit:hover{
+    cursor: pointer;
+    border-style: none;
+    color: var(--accent-color);
+    background-color: var(--text-color);
+    box-shadow: 0.5px 0px 8px var(--background-color);
+}
+
+#reset:hover{
+    cursor: pointer;
+    border-style: none;
+    color: var(--accent-color);
+    background-color: #cb1616;
+    box-shadow: 0.5px 0px 8px var(--background-color);
+}
+
+/* ==appointment maps== */
+.maps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+    
+}
+
+.maps h3{
+    color: var(--navbar-color);
+    text-decoration: underline;
+}
+
+iframe{
+    border-radius: 2rem;
+    box-shadow: 0.5px 0px 10px var(--background-color);
+}
+
+
+/* ==========================================
+   SUNRISE COMMUNITY HOSPITAL - ABOUT PAGE
+   ========================================== */
+
+.about-page {
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+
+
+.about-container {
+    width: 100%;
+    padding: 2rem 3rem;
+    margin: 0 auto;
+    background-color: var(--navbar-color);
+}
+
+.section-padding {
+    padding: 7rem 0;
+}
+
+.about-label,
+.about-eyebrow {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.about-page h2 {
+    font-size: clamp(2.5rem, 4vw, 3.6rem);
+    line-height: 1.25;
+    margin: 1rem 0 2rem;
+    color: #17324d;
+}
+
+.about-page p {
+    font-size: 1.6rem;
+    line-height: 1.85;
+    color: #596779;
+}
+
+.about-page a {
+    text-decoration: none;
+}
+
+/* ========== HERO ========== */
+
+.about-hero {
+    position: relative;
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(246, 206, 25, 0.23),
+            transparent 30%
+        ),
+        linear-gradient(
+            115deg,
+            #e9f7df 0%,
+            #edf8fa 55%,
+            #e2f1fb 100%
+        );
+    overflow: hidden;
+}
+
+.about-hero::after {
+    content: "+";
+    position: absolute;
+    right: 8%;
+    bottom: -12rem;
+    color: rgba(14, 200, 101, 0.595);
+    font-size: 38rem;
+    line-height: 1;
+    font-weight: 800;
+}
+
+
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 6rem ;
+    background:  url(images/nurses.avif);
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+
+.about-hero-content ::after{
+    background: linear-gradient(to right, rgba(64, 241, 0, 0.286) 0%, rgb(37, 37, 37) 100%);
+}
+
+.about-hero .about-eyebrow {
+    color: var(--navbar-color);
+}
+
+.about-hero h1 {
+    max-width: 720px;
+    margin: 1.5rem 0;
+    color: var(--button-color);
+    font-size: clamp(3.2rem, 5vw, 5.2rem);
+    line-height: 1.15;
+}
+
+.about-hero-content > p {
+    max-width: 650px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.about-breadcrumb {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.about-breadcrumb a {
+    color: var(--secondary-color);
+}
+
+.about-breadcrumb span:nth-child(3) {
+    color: var(--navbar-color);
+}
+
+/* ========== OUR STORY ========== */
+
+.story-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 6rem;
+}
+
+.story-visual {
+    position: relative;
+    min-width: 0;
+    padding: 0 1.5rem 2rem 0;
+}
+
+.story-image {
+    height: 430px;
+    overflow: hidden;
+    border-radius: 2rem;
+    background: linear-gradient(
+        145deg,
+        #dff1d3,
+        #dceefa
+    );
+}
+
+.story-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-highlight {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 88%;
+    margin: -5rem auto 0;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 1.2rem;
+    box-shadow: 0 10px 35px rgba(24, 51, 73, 0.12);
+}
+
+.highlight-icon {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: #edf8df;
+    color: var(--accent-color);
+    border-radius: 50%;
+    font-size: 2.8rem;
+}
+
+.story-highlight h3 {
+    color: #17324d;
+    font-size: 1.7rem;
+}
+
+.story-highlight p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.story-content h2 {
+    margin-bottom: 2rem;
+}
+
+.story-content > p {
+    margin-bottom: 1.5rem;
+}
+
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 1.4rem 2.4rem;
+    background: var(--secondary-color);
+    color: #ffffff;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.about-btn:hover {
+    background: #0876b7;
+    transform: translateY(-2px);
+}
+
+.about-btn span {
+    font-size: 2rem;
+}
+
+/* ========== MISSION & VISION ========== */
+
+.mission-vision {
+    background: #f5f9fc;
+}
+
+.about-section-heading {
+    max-width: 720px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.about-section-heading h2 {
+    margin-bottom: 1.2rem;
+}
+
+.purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+}
+
+.purpose-card {
+    padding: 3.5rem;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e3edf4;
+    box-shadow: 0 8px 24px rgba(20, 54, 79, 0.05);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.purpose-card:hover,
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(20, 54, 79, 0.11);
+}
+
+.mission-card {
+    border-top: 4px solid var(--accent-color);
+}
+
+.vision-card {
+    border-top: 4px solid var(--secondary-color);
+}
+
+.purpose-icon {
+    display: grid;
+    place-items: center;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 1.2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: #ffffff;
+    background: var(--accent-color);
+}
+
+.vision-card .purpose-icon {
+    background: var(--secondary-color);
+}
+
+.purpose-card h3,
+.value-card h3 {
+    font-size: 2rem;
+    color: #17324d;
+    margin-bottom: 1.2rem;
+}
+
+/* ========== CORE VALUES ========== */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    padding: 2.5rem 2rem;
+    border: 1px solid #e5edf3;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    box-shadow: 0 5px 18px rgba(20, 54, 79, 0.04);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.value-icon {
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    background: #edf7e4;
+    color: #4c9419;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.value-card:nth-child(even) .value-icon {
+    background: #e5f3fc;
+    color: var(--secondary-color);
+}
+
+.value-card p {
+    font-size: 1.45rem;
+    line-height: 1.75;
+}
+
+/* ========== PATIENT-CENTRED CARE ========== */
+
+.patient-care-section {
+    padding: 7rem 0;
+    background: #f6faf5;
+}
+
+.patient-care-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 5rem;
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+.patient-care-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.care-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    list-style: none;
+}
+
+.care-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    color: #35475a;
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+.care-list li span {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #e5f3d8;
+    color: #428a16;
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+.patient-care-visual {
+    min-height: 350px;
+    display: grid;
+    place-items: center;
+    padding: 3rem;
+    border-radius: 2rem;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(246, 206, 25, 0.4),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #1790db,
+            #0873a8
+        );
+}
+
+.care-message {
+    width: 100%;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1.5rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.care-cross {
+    display: block;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.care-message h3 {
+    color: #ffffff;
+    font-size: 2.8rem;
+    line-height: 1.4;
+}
+
+.care-message p {
+    margin-top: 1.5rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+/* ========== CALL TO ACTION ========== */
+
+.about-cta {
+    padding: 5rem 0;
+    
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.cta-content h2 {
+    margin: 0 0 1rem;
+    color: var(--navbar-color);
+    font-size: 2.8rem;
+}
+
+.cta-content p {
+    max-width: 650px;
+    
+    font-size: 1.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cta-primary,
+.cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.5rem;
+    padding: 1.2rem 2rem;
+    border-radius: 3rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.cta-primary {
+    background: var(--button-color);
+    color: #ffffff;
+}
+
+.cta-primary:hover {
+    background: var(--text-color);
+    color: var(--button-color);
+    border: 1px solid var(--button-color);
+
+}
+
+.cta-secondary {
+    border: 1px solid var(--navbar-color);
+    color: var(--navbar-color);
+}
+
+.cta-secondary:hover {
+    background: var(--navbar-color);
+    color: #ffffff;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 900px) {
+    .story-layout,
+    .patient-care-layout {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .story-visual {
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .patient-care-visual {
+        min-height: 300px;
+    }
+
+    .cta-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    
 }

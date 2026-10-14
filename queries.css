@@ -326,6 +326,76 @@
         justify-content: center;
     }
     
+.section-padding {
+        padding: 4.5rem 0;
+    }
+
+    .about-container,
+    .about-hero-content {
+        width: 90%;
+    }
+
+    .about-hero {
+        min-height: 350px;
+    }
+
+    .about-hero-content {
+        padding: 4rem 0;
+    }
+
+    .about-hero h1 {
+        font-size: 3.4rem;
+    }
+
+    .story-image {
+        height: 280px;
+    }
+
+    .story-highlight {
+        width: 95%;
+        padding: 1.5rem;
+        margin-top: -3rem;
+    }
+
+    .purpose-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .purpose-card {
+        padding: 2.5rem;
+    }
+
+    .value-card {
+        padding: 2.5rem;
+    }
+
+    .patient-care-visual {
+        padding: 1.5rem;
+        min-height: 280px;
+    }
+
+    .care-message {
+        padding: 2rem;
+    }
+
+    .care-message h3 {
+        font-size: 2.4rem;
+    }
+
+    .cta-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cta-primary,
+    .cta-secondary {
+        width: 100%;
+    }
 
    }
 
@@ -338,6 +408,9 @@
 
     .motto{
         display: none;
+    }
+    .page-elements{
+        width: 100%;
     }
 
     .title-bar{
@@ -447,6 +520,76 @@
         justify-content: center;
     }
 
+    .section-padding {
+        padding: 4.5rem 0;
+    }
+
+    .about-container,
+    .about-hero-content {
+        width: 90%;
+    }
+
+    .about-hero {
+        min-height: 350px;
+    }
+
+    .about-hero-content {
+        padding: 4rem 0;
+    }
+
+    .about-hero h1 {
+        font-size: 3.4rem;
+    }
+
+    .story-image {
+        height: 280px;
+    }
+
+    .story-highlight {
+        width: 95%;
+        padding: 1.5rem;
+        margin-top: -3rem;
+    }
+
+    .purpose-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .purpose-card {
+        padding: 2.5rem;
+    }
+
+    .value-card {
+        padding: 2.5rem;
+    }
+
+    .patient-care-visual {
+        padding: 1.5rem;
+        min-height: 280px;
+    }
+
+    .care-message {
+        padding: 2rem;
+    }
+
+    .care-message h3 {
+        font-size: 2.4rem;
+    }
+
+    .cta-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cta-primary,
+    .cta-secondary {
+        width: 100%;
+    }
 
    }
 
