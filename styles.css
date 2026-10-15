@@ -924,7 +924,7 @@ footer h2{
     align-content: center;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(64, 241, 0, 0.199) 0%, rgba(17, 17, 17, 0.278) 100%), url(images/neurologist.jpg);
+    background: linear-gradient(to right, rgba(75, 201, 21, 0.25) 0%, rgba(11, 11, 10, 0.435) 100%), url(images/neurologist.jpg);
     background-size:cover;
     background-position: right top;
     background-repeat: no-repeat;
@@ -932,11 +932,20 @@ footer h2{
     text-align: center;
 }
 
+.appointment-hero a{
+    text-decoration: none;
+    color: var(--navbar-color);
+}
 .appointment-hero div{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 25%;
+}
+.appointment-hero pre{
+    color: var(--text-color);
+    font-weight:700;
+    font-size: 1.6rem;
 }
 .page-bread-crumb{
     display: block;
@@ -952,6 +961,7 @@ footer h2{
     color: var(--button-color);
     font-weight: bold;
 }
+
 
  /* =======Form application container====== */
 .appointment-div{
@@ -1106,7 +1116,7 @@ iframe{
     width: 100%;
     padding: 2rem 3rem;
     margin: 0 auto;
-    background-color: var(--navbar-color);
+    
 }
 
 .section-padding {
@@ -1116,7 +1126,7 @@ iframe{
 .about-label,
 .about-eyebrow {
     display: inline-block;
-    color: var(--secondary-color);
+    color: var(--button-color);
     font-size: 1.3rem;
     font-weight: 800;
     letter-spacing: 0.15em;
@@ -1127,7 +1137,7 @@ iframe{
     font-size: clamp(2.5rem, 4vw, 3.6rem);
     line-height: 1.25;
     margin: 1rem 0 2rem;
-    color: #17324d;
+    color: var(--navbar-color);
 }
 
 .about-page p {
@@ -1145,25 +1155,15 @@ iframe{
 .about-hero {
     position: relative;
     min-height: 390px;
+    height: 50vh;
     display: flex;
     align-items: center;
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(246, 206, 25, 0.23),
-            transparent 30%
-        ),
-        linear-gradient(
-            115deg,
-            #e9f7df 0%,
-            #edf8fa 55%,
-            #e2f1fb 100%
-        );
     overflow: hidden;
+    margin-top: 1rem;
 }
 
 .about-hero::after {
-    content: "+";
+    content: "";
     position: absolute;
     right: 8%;
     bottom: -12rem;
@@ -1181,23 +1181,20 @@ iframe{
     width: 100%;
     margin: 0 auto;
     padding: 6rem ;
-    background:  url(images/nurses.avif);
+    background: linear-gradient(to right, rgba(47, 75, 36, 0.403) 0%, rgba(11, 11, 10, 0.341) 100%), url(images/nurses.avif);
     background-size: cover ;
     background-repeat: no-repeat;
-}
-
-.about-hero-content ::after{
-    background: linear-gradient(to right, rgba(64, 241, 0, 0.286) 0%, rgb(37, 37, 37) 100%);
+    height: 100%;
 }
 
 .about-hero .about-eyebrow {
-    color: var(--navbar-color);
+    color: var(--primary-color);
 }
 
 .about-hero h1 {
     max-width: 720px;
     margin: 1.5rem 0;
-    color: var(--button-color);
+    color: var(--navbar-color);
     font-size: clamp(3.2rem, 5vw, 5.2rem);
     line-height: 1.15;
 }
@@ -1395,6 +1392,13 @@ iframe{
 }
 
 /* ========== CORE VALUES ========== */
+.about-values{
+    background-color: var(--navbar-color);
+}
+
+.about-values .about-section-heading h2, .about-values .about-section-heading p {
+    color: var(--text-color);
+}
 
 .values-grid {
     display: grid;

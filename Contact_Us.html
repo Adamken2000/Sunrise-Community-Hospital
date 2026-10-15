@@ -109,7 +109,217 @@
 
         <!--main webpage contents-->
         <main>
+            <!-- SECTION 1: CONTACT HERO -->
+            <section class="contact-hero">
+                <div class="contact-hero-overlay">
+                    <div class="contact-container contact-hero-content">
+                        <p class="contact-eyebrow">WE ARE HERE FOR YOU</p>
+                        <h1>Contact Us</h1>
+                        <p>
+                            Your health matters to us. Reach out to Sunrise Community
+                            Hospital for appointments, inquiries, or assistance.
+                        </p>
 
+                        <div class="contact-breadcrumb">
+                            <a href="index.html">Home</a>
+                            <span>/</span>
+                            <span>Contact Us</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: CONTACT INFORMATION -->
+            <section class="contact-information">
+                <div class="contact-container">
+                    <div class="contact-heading">
+                        <span class="contact-label">GET IN TOUCH</span>
+                        <h2>We'd Love to Hear From You</h2>
+                        <p>
+                            Whether you need medical assistance or have a question,
+                            our team is ready to help.
+                        </p>
+                    </div>
+
+                    <div class="contact-info-grid">
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon">☎</div>
+                            <h3>Call Us</h3>
+                            <p>Speak to our hospital team for assistance.</p>
+                            <a href="tel:+254700000000">+254 700 000 000</a>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon">✉</div>
+                            <h3>Email Us</h3>
+                            <p>Send us your questions or general inquiries.</p>
+                            <a href="mailto:info@sunrisehospital.co.ke">
+                                info@sunrisehospital.co.ke
+                            </a>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon">⌖</div>
+                            <h3>Visit Us</h3>
+                            <p>We welcome you to Sunrise Community Hospital.</p>
+                            <span>Enter your hospital's physical address</span>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon">◷</div>
+                            <h3>Opening Hours</h3>
+                            <p>Contact us to confirm clinic and service hours.</p>
+                            <span>Update with your actual operating hours</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: CONTACT FORM
+                Background changes to your navbar-color here. -->
+            <section class="contact-form-section">
+                <div class="contact-container contact-form-layout">
+
+                    <div class="contact-form-intro">
+                        <span class="contact-label">SEND US A MESSAGE</span>
+                        <h2>How Can We Help You?</h2>
+                        <p>
+                            Fill in the form and our team will get back to you.
+                            Please avoid including sensitive medical information
+                            in this general inquiry form.
+                        </p>
+
+                        <div class="contact-promise">
+                            <span class="promise-check">✓</span>
+                            <div>
+                                <h3>Patient-centred service</h3>
+                                <p>We aim to treat every inquiry with care and respect.</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-promise">
+                            <span class="promise-check">✓</span>
+                            <div>
+                                <h3>Helpful support</h3>
+                                <p>Our team can guide you to the appropriate service.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" action="#" method="post">
+                        <h3>Send an Inquiry</h3>
+                        <p class="form-description">
+                            Fields marked with * are required.
+                        </p>
+
+                        <div class="contact-input-row">
+                            <div class="contact-form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input
+                                    type="text"
+                                    id="contact-name"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="contact-form-group">
+                                <label for="contact-email">Email Address *</label>
+                                <input
+                                    type="email"
+                                    id="contact-email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    autocomplete="email"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="contact-input-row">
+                            <div class="contact-form-group">
+                                <label for="contact-phone">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    id="contact-phone"
+                                    name="phone"
+                                    placeholder="e.g. +254 7XX XXX XXX"
+                                    autocomplete="tel"
+                                >
+                            </div>
+
+                            <div class="contact-form-group">
+                                <label for="contact-subject">Inquiry Type *</label>
+                                <select id="contact-subject" name="subject" required>
+                                    <option value="">Select an inquiry</option>
+                                    <option value="appointment">Appointment</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="services">Hospital Services</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="contact-message">Your Message *</label>
+                            <textarea
+                                id="contact-message"
+                                name="message"
+                                rows="6"
+                                placeholder="How can we assist you?"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="contact-submit-btn">
+                            Send Message <span>→</span>
+                        </button>
+
+                        <p class="form-note">
+                            This form is for general inquiries, not emergencies.
+                        </p>
+                    </form>
+
+                </div>
+            </section>
+
+            <!-- SECTION 4: LOCATION -->
+            <section class="contact-location-section">
+                <div class="contact-container contact-location-layout">
+                    <div class="contact-location-text">
+                        <span class="contact-label">FIND US</span>
+                        <h2>Visit Sunrise Community Hospital</h2>
+                        <p>
+                            We look forward to welcoming you. Replace the address
+                            below with your hospital's actual location.
+                        </p>
+
+                        <p class="location-address">
+                            <strong>Address:</strong> Add your hospital's physical address
+                        </p>
+
+                        <a
+                            class="contact-map-btn"
+                            href="https://www.google.com/maps"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Open Google Maps →
+                        </a>
+                    </div>
+
+                    <div class="contact-location-placeholder">
+                        <div class="location-pin">⌖</div>
+                        <h3>Our Location</h3>
+                        <p>Add a Google Maps embed here once the hospital address is confirmed.</p>
+                    </div>
+                </div>
+            </section>
             
         </main>
 
