@@ -113,7 +113,30 @@
     font-size: 1.75rem;
   }
 
-   
+   .story-layout,
+    .patient-care-layout {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .story-visual {
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .patient-care-visual {
+        min-height: 300px;
+    }
+
+    .cta-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
 /* ==========================================
    Small Screens (Mobile Phones: 575px to 700px)
