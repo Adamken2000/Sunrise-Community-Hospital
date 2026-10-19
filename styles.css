@@ -1073,7 +1073,7 @@ footer h2{
 #reset:hover{
     cursor: pointer;
     border-style: none;
-    color: var(--accent-color);
+    color: var(--text-color);
     background-color: #cb1616;
     box-shadow: 0.5px 0px 8px var(--background-color);
 }
@@ -1181,7 +1181,7 @@ iframe{
     width: 100%;
     margin: 0 auto;
     padding: 6rem ;
-    background: linear-gradient(to right, rgba(47, 75, 36, 0.403) 0%, rgba(11, 11, 10, 0.341) 100%), url(images/nurses.avif);
+    background: linear-gradient(to right, rgba(47, 75, 36, 0.403) 0%, rgba(11, 11, 10, 0.341) 100%), url(images/nurses.jpg);
     background-size: cover ;
     background-repeat: no-repeat;
     height: 100%;
@@ -1603,35 +1603,905 @@ iframe{
     color: #ffffff;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
 
-@media (max-width: 900px) {
-    .story-layout,
-    .patient-care-layout {
-        grid-template-columns: 1fr;
-        gap: 4rem;
-    }
 
-    .story-visual {
-        max-width: 650px;
-        width: 100%;
-        margin: 0 auto;
-    }
 
-    .values-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+/* ========================================
+   CONTACT US PAGE
+======================================== */
 
-    .patient-care-visual {
-        min-height: 300px;
-    }
-
-    .cta-content {
-        align-items: flex-start;
-        flex-direction: column;
-    }
+.contact-page {
+    width: 100%;
+    overflow: hidden;
+    color: var(--text-color);
 }
 
-@media (max-width: 600px) {
+.contact-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* SECTION 1: HERO */
+
+.contact-hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(21, 45, 61, 0.88),
+            rgba(21, 45, 61, 0.48)
+        ),
+        url("images/nurse_on_call.jpg") center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact-hero-overlay {
+    width: 100%;
+    padding: 75px 0;
+}
+
+.contact-hero-content {
+    text-align: left;
+}
+
+.contact-eyebrow {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.contact-hero h1 {
+    color: #fff;
+    font-size: clamp(3.5rem, 5vw, 5.5rem);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.contact-hero-content > p:not(.contact-eyebrow) {
+    max-width: 620px;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.contact-hero-content h1{
+    color: var(--navbar-color);
+}
+
+.contact-crumb{
+    color: var(--navbar-color);
+}
+.contact-label{
+    display: inline-block;
+    color: var(--button-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.contact-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.contact-breadcrumb a {
+    color: var(--button-color);
+    text-decoration: none;
+}
+
+.contact-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* SECTION 2: CONTACT INFORMATION */
+
+.contact-information {
+    padding: 75px 0 85px;
+    background-color: var(--background-color);
+    color: #2c3e50;
+}
+
+.contact-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.contact-heading h2,
+.contact-form-intro h2,
+.contact-location-text h2 {
+    font-size: clamp(2.6rem, 3.5vw, 3.8rem);
+    line-height: 1.25;
+    margin-bottom: 18px;
+    color: var(--navbar-color);
+}
+
+.contact-heading > p,
+.contact-location-text > p {
+    font-size: 1.7rem;
+    line-height: 1.8;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.contact-info-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border-bottom: 4px solid var(--navbar-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: transform var(--trans-transition),
+                box-shadow var(--trans-transition);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.contact-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #263746;
+    font-size: 2.6rem;
+}
+
+.contact-info-card h3 {
+    color: #2c3e50;
+    font-size: 1.9rem;
+    margin-bottom: 12px;
+}
+
+.contact-info-card p,
+.contact-info-card span {
+    display: block;
+    color: #64717d;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.contact-info-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-info-card a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* SECTION 3: CONTACT FORM
+   This is where navbar-color begins. */
+
+.contact-form-section {
+    padding: 85px 0;
+    background-color: var(--navbar-color);
+    color: #253447;
+}
+
+.contact-form-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 55px;
+}
+
+.contact-form-intro {
+    padding-top: 25px;
+}
+
+.contact-form-intro .contact-label,
+.contact-form-section .contact-label {
+    color: var(--primary-color);
+}
+
+.contact-form-intro h2 {
+    color: var(--text-color);
+    margin-bottom: 22px;
+}
+
+.contact-form-intro > p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.contact-promise {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.promise-check {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contact-promise h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2px;
+    color: #263746;
+}
+
+.contact-promise p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* FORM CARD */
+
+.contact-form {
+    background: #fff;
+    color: #2c3e50;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form > h3 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.form-description {
+    color: #6b7782;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+.contact-input-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.contact-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.contact-form-group label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.contact-form-group input,
+.contact-form-group select,
+.contact-form-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid #d8e0e6;
+    border-radius: 7px;
+    background: #fff;
+    color: #2c3e50;
+    font-family: inherit;
+    font-size: 1.4rem;
+    outline: none;
+    transition: border-color var(--trans-transition),
+                box-shadow var(--trans-transition);
+}
+
+.contact-form-group input,
+.contact-form-group select {
+    min-height: 48px;
+}
+
+.contact-form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(23, 144, 219, 0.14);
+}
+
+.contact-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 15px 22px;
+    border: none;
+    border-radius: 7px;
+    background: var(--button-color);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--trans-transition),
+                transform var(--trans-transition);
+}
+
+.contact-submit-btn:hover {
+    background: var(--button-hover-color);
+    transform: translateY(-2px);
+}
+
+.contact-submit-btn span {
+    font-size: 2rem;
+}
+
+.form-note {
+    margin-top: 16px;
+    color: #6b7782;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* SECTION 4: LOCATION
+   The navbar-color background continues here. */
+
+.contact-location-section {
+    padding: 75px 0;
+    
+    color: #253447;
+}
+
+.contact-location-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.contact-location-text h2 {
+    color: #263746;
+}
+
+.location-address {
+    margin: 22px 0;
+}
+
+.contact-map-btn {
+    display: inline-block;
+    padding: 13px 22px;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color var(--trans-transition);
+}
+
+.contact-map-btn:hover {
+    background: var(--button-hover-color);
+}
+
+.contact-location-placeholder {
+    height:fit-content;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.location-pin {
+    font-size: 5rem;
+    color: #263746;
+    margin-bottom: 0.2rem;
+}
+
+.contact-location-placeholder h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-location-placeholder p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SUNRISE COMMUNITY HOSPITAL
+   SERVICES PAGE
+========================================= */
+
+.services-page {
+    width: 100%;
+    overflow: hidden;
+    color: #2c3e50;
+}
+
+.services-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-page a {
+    text-decoration: none;
+}
+
+/* SECTION 1: HERO */
+
+.services-hero {
+    min-height: 350px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 45, 23, 0.7),
+            rgba(10, 11, 11, 0.4)
+        ),
+        url("images/group_of_doctors.jpg") center top/cover no-repeat;
+}
+
+.services-hero-overlay {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 55px 0;
+}
+
+.services-hero-content {
+    position: relative;
+}
+
+.services-eyebrow,
+.services-label {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.services-hero h1 {
+    color: var(--navbar-color);
+    font-size: clamp(3.4rem, 4.5vw, 5rem);
+    line-height: 1.18;
+    margin-bottom: 18px;
+}
+
+.services-hero-content > p {
+    max-width: 540px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    color: var(--text-color);
+}
+
+.services-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.services-breadcrumb a {
+    color: var(--button-color);
+}
+
+.services-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* SECTION 2: WHY CHOOSE US */
+
+.services-why {
+    background-color: var(--background-color);
+    padding: 65px 0 75px;
+}
+
+.services-heading {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.services-heading span{
+    color: var(--button-color);
+}
+
+.services-heading h2,
+.services-departments-intro h2,
+.services-commitment-content h2 {
+    color: var(--navbar-color);
+    font-size: clamp(2.7rem, 3.5vw, 3.7rem);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.services-heading > p,
+.services-departments-intro > p,
+.services-commitment-content > p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.services-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.services-benefit-card {
+    padding: 28px 20px;
+    background: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.045);
+    transition: transform var(--trans-transition),
+                box-shadow var(--trans-transition);
+}
+
+.services-benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 25px rgba(0, 0, 0, 0.25);
+}
+
+.services-benefit-icon {
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.benefit-yellow {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.benefit-blue {
+    background: var(--secondary-color);
+}
+
+.benefit-green {
+    background: var(--accent-color);
+}
+
+.services-benefit-card h3 {
+    color: #17496f;
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+}
+
+.services-benefit-card p {
+    color: #52697b;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* SECTION 3: MEDICAL DEPARTMENTS
+   Background changes to navbar-color here. */
+
+.services-departments {
+    padding: 75px 0;
+    background-color: var(--navbar-color);
+    color: #263746;
+}
+
+.services-departments-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.7fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.services-departments .services-label,
+.services-commitment .services-label {
+    color: var(--primary-color);
+}
+
+.services-departments-intro h2 {
+    color: var(--text-color);
+}
+
+.services-departments-intro > p {
+    margin-bottom: 25px;
+    color: #304b35;
+}
+
+.services-main-btn,
+.services-commitment-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 13px 22px;
+    border-radius: 8px;
+    background: var(--secondary-color);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: transform var(--trans-transition),
+                background-color var(--trans-transition);
+}
+
+.services-main-btn:hover,
+.services-commitment-btn:hover {
+    transform: translateY(-2px);
+    background: var(--button-hover-color);
+}
+
+.services-main-btn span,
+.services-commitment-btn span,
+.services-appointment-btn span {
+    font-size: 1.9rem;
+}
+
+.services-department-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.services-department-card {
+    min-height: 145px;
+    padding: 18px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(36, 70, 43, 0.1);
+    border-radius: 10px;
+    transition: transform var(--trans-transition),
+                box-shadow var(--trans-transition);
+}
+
+.services-department-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.department-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.department-yellow {
+    color: #d99d00;
+    background: #fff4cc;
+}
+
+.department-blue {
+    color: #087fc4;
+    background: #e1f3ff;
+}
+
+.department-green {
+    color: #4c941b;
+    background: #eaf5df;
+}
+
+.department-red {
+    color: #e34545;
+    background: #ffe6e6;
+}
+
+.services-department-card h3 {
+    color: #23442c;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.department-arrow {
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+/* SECTION 4: OUR COMMITMENT */
+
+.services-commitment {
+    padding: 65px 0;
+}
+
+.services-commitment-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.services-commitment-image {
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.services-commitment-image img {
+    display: block;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.services-commitment-content {
+    padding-left: 25px;
+    border-left: 3px solid var(--accent-color);
+}
+
+.services-commitment-content h2 {
+    color: #203e29;
+    font-size: clamp(2.5rem, 3vw, 3.4rem);
+}
+
+.services-commitment-content > p {
+    color: #304b35;
+}
+
+.services-commitment-list {
+    padding-left: 0;
+    margin: 22px 0 28px;
+    list-style: none;
+}
+
+.services-commitment-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: #304b35;
+    font-size: 1.45rem;
+    line-height: 1.7;
+}
+
+.services-commitment-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #245b22;
+    font-weight: 800;
+}
+
+.services-commitment-btn {
+    background: var(--accent-color);
+}
+
+.services-commitment-btn:hover {
+    background: #4e8610;
+}
+
+/* SECTION 5: APPOINTMENT CTA */
+
+.services-cta {
+    padding: 32px 0;
     
 }
+
+.services-cta-content {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 28px 30px;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 12px;
+}
+
+.services-cta-icon {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    font-size: 3rem;
+}
+
+.services-cta-text {
+    flex: 1;
+}
+
+.services-cta-text h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.services-cta-text p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: #fff;
+    margin: 0;
+}
+
+.services-appointment-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 22px;
+    border-radius: 8px;
+    background: var(--text-color);
+    color: var(--button-color);
+    font-size: 1.4rem;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: background-color var(--trans-transition),
+                transform var(--trans-transition);
+}
+
+.services-appointment-btn:hover {
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--text-color);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+

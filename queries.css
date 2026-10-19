@@ -137,6 +137,26 @@
         align-items: flex-start;
         flex-direction: column;
     }
+
+    .services-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-departments-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .services-departments-intro {
+        max-width: 650px;
+    }
+
+    .services-department-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .services-commitment-layout {
+        gap: 30px;
+    }
 }
 /* ==========================================
    Small Screens (Mobile Phones: 575px to 700px)
@@ -230,6 +250,47 @@
     div .image{
         display: flex;
         justify-content: center;
+    }
+    
+    .services-hero,
+    .services-hero-overlay {
+        min-height: 320px;
+    }
+
+    .services-hero {
+        background-position: 60% center;
+    }
+
+    .services-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .services-department-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-commitment-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .services-commitment-image img {
+        height: 280px;
+    }
+
+    .services-commitment-content {
+        padding-left: 20px;
+    }
+
+    .services-cta-content {
+        flex-wrap: wrap;
+    }
+
+    .services-cta-text {
+        min-width: 200px;
+    }
+
+    .services-appointment-btn {
+        margin-left: 80px;
     }
 
 }
@@ -418,6 +479,75 @@
     .cta-primary,
     .cta-secondary {
         width: 100%;
+    }
+
+    .services-container {
+        width: 92%;
+    }
+
+    .services-hero,
+    .services-hero-overlay {
+        min-height: 300px;
+    }
+
+    .services-hero h1 {
+        font-size: 3rem;
+    }
+
+    .services-hero-content > p {
+        font-size: 1.45rem;
+    }
+
+    .services-why,
+    .services-departments,
+    .services-commitment {
+        padding: 50px 0;
+    }
+
+    .services-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-department-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .services-department-card {
+        min-height: 135px;
+        padding: 14px 8px;
+    }
+
+    .services-commitment-content {
+        padding-left: 15px;
+    }
+
+    .services-cta {
+        padding: 22px 0;
+    }
+
+    .services-cta-content {
+        padding: 22px 18px;
+        gap: 14px;
+    }
+
+    .services-cta-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 2.5rem;
+    }
+
+    .services-cta-text h2 {
+        font-size: 2rem;
+    }
+
+    .services-cta-text p {
+        font-size: 1.3rem;
+    }
+
+    .services-appointment-btn {
+        width: 100%;
+        margin-left: 0;
     }
 
    }
