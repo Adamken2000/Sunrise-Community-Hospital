@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="queries.css">
     <link rel="icon" type="image/x-icon" href="images/sunrise_logo.png">
     <link rel="stylesheet" href="https://cloudflare.com">
-    <script src="script.js"></script>
+    
     
     <title>Sunrise Community Hospital</title>
 </head>
@@ -136,13 +136,15 @@
             </div>
 
             <div class="appointment-div">
-                <form action="process.php" method="post" class="form-block">
+                <form action="process.php" method="post" class="form-block" id="appointmentForm">
                     <h2>Appointment Booking Form</h2>
-                    <div class="name-id">
+
+                    <div id="formErrors" class="form-errors"
+                        role="alert" aria-live="polite" hidden></div>
 
                         <div class="patient-names">
                             <label for="name">Patient Name: </label>
-                            <input type="text" id="patient_name" name="name" placeholder="Enter your names" max="120" required>
+                            <input type="text" id="patient_name" name="name" placeholder="Enter your names" maxlength="120" required>
                         </div>
 
                         <div class="patient-id">
@@ -201,7 +203,8 @@
                         <button type="submit" id="submit">Submit</button>
                         <button type="reset" id="reset">Reset</button>
                     </div>
-
+                    <br>
+                    
                 </form>
             </div>
 
@@ -267,5 +270,6 @@
             </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html> 
