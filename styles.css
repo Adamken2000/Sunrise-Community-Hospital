@@ -17,6 +17,7 @@ body, main {
     overflow-x: hidden;
     line-height: 1.65;
     color: #2c3e50;
+    
 }
 
 
@@ -575,9 +576,11 @@ header{
 }
 
 .why-choose-us{
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     text-align: center;
+    align-items: center;
     margin-top: 5rem;
 }
 
@@ -627,6 +630,44 @@ header{
     margin-top: 2rem;
 }
 
+.public-api{
+    background: #fff;
+    padding: 2.5rem 2rem;
+    margin-top: 5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+    
+}
+
+.public-api h2{
+    color: var(--navbar-color);
+    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.public-api a{
+    text-decoration: none;
+    color: var(--button-color);
+}
+
+.public-api a:hover{
+    text-decoration: underline;
+    
+}
+
+.public-api abbr{
+    text-decoration: none;
+    font-weight: 700;
+}
+
 /* Need care contact */
 .do-you-need-care{
     display: flex;
@@ -673,7 +714,7 @@ header{
 /* Section Container */
 .testimonials-section {
   padding: 5rem 2rem;
-  background-color: #f8fafc; /* Light clean background */
+  background-color: #f8fafc; 
 }
 
 .container {
@@ -2498,6 +2539,43 @@ iframe{
     background-color: var(--secondary-color);
     border: 1px solid var(--text-color);
     transform: translateY(-2px);
+}
+
+/* validation messages */
+
+.form-errors {
+    margin: 15px 0;
+    padding: 15px 20px;
+    border-left: 4px solid #d9534f;
+    border-radius: 5px;
+    background: #fff0f0;
+    color: #9d2525;
+    font-size: 1.4rem;
+}
+
+.form-errors[hidden] {
+    display: none;
+}
+
+.form-errors p {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-errors ul {
+    padding-left: 22px;
+}
+
+.field-error {
+    display: block;
+    margin-top: 5px;
+    color: #b42318;
+    font-size: 1.25rem;
+}
+
+.form-block [aria-invalid="true"] {
+    border-color: #d9534f;
+    outline-color: #d9534f;
 }
 
 
