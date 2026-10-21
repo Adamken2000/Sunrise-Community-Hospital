@@ -1,18 +1,21 @@
 <?php
+declare(strict_types=1);
 // Database connection
 $host = 'localhost';
+$database = 'hospital_management';
 $user = 'root';
 $password = '';
-$database = 'hospital_management';
 
-$conn = mysqli_connect($host,$user,$password,$database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8mb4", $user, $password, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    ]);
+} catch (PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
 }
-
 // process.php
-declare(strict_types=1);
+
 
 session_start();
 
@@ -21,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-require __DIR__ . '/db.php';
+
 
 function postValue(string $key): string
 {
@@ -171,6 +174,8 @@ $departmentNames = [
     'neurology'  => 'Neurology',
     'dental'     => 'Dental Care'
 ];
+
+
 
 ?>
 <!DOCTYPE html>
